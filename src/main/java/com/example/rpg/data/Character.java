@@ -28,4 +28,8 @@ public class Character {
     @OneToOne
     @JsonIgnoreProperties("accountCharacter")
     private Account characterAccount;
+
+    @OneToOne
+    @JsonIgnoreProperties("character")
+    private Bag bag;
 }
