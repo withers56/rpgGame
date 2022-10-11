@@ -25,6 +25,20 @@ public class Character {
     @Column(nullable = false)
     private Long level;
 
+    @Column(nullable = false)
+    private Long maxHp;
+
+    @Column(nullable = false)
+    private Long currentHp;
+
+    @OneToOne
+    @JsonIgnoreProperties("bags")
+    private Armor equipedArmor;
+
+    @OneToOne
+    @JsonIgnoreProperties("bags")
+    private Weapon equipedWeapon;
+
     @OneToOne
     @JsonIgnoreProperties("accountCharacter")
     private Account characterAccount;

@@ -1,4 +1,6 @@
 export default function Login(props) {
+    fetch("http://localhost:8080/rpg/accounts").then(r => r.json()).then(d => console.log(d))
+
     return `
 
         <div class="">

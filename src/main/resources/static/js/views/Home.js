@@ -1,5 +1,6 @@
 export default function Home(props) {
-    console.log("The frontend did it. HER FAULT");
+    console.log(props);
+    fetch("http://localhost:8080/rpg/accounts").then(r => r.json()).then(d => console.log(d))
     return `
         <main class="col-10">
         <div style="max-height: 100vh; overflow: scroll;">
