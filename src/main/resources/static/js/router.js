@@ -1,4 +1,4 @@
-import Home from "./views/Home.js";
+import Home, {HomeEvent} from "./views/Home.js";
 import PostIndex from "./views/PostIndex.js";
 import {PostsEvent} from "./views/PostIndex.js";
 import About from "./views/About.js";
@@ -19,12 +19,15 @@ import PersonInfo, {PersonInfoEvents} from "./views/PersonInfo.js";
  */
 export default function router(URI) {
     const routes = {
-        // '/': {
-        //     returnView: Home,
-        //     state: {},
-        //     uri: '/',
-        //     title: 'Home',
-        // },
+        '/home': {
+            returnView: Home,
+            state: {
+                me: '/rpg/accounts/me'
+            },
+            uri: '/',
+            title: 'Home',
+            viewEvent: HomeEvent
+        },
         '/': {
             returnView: Login,
             state: {

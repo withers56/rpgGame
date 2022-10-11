@@ -33,6 +33,6 @@ public class Account {
     public enum Role {USER, MOD}
 
     @OneToOne
-    @JsonIgnoreProperties("characterAccount")
-    private Character accountCharacter;
+    @JsonIgnoreProperties("heroAccount")
+    private Hero accountHero;
 }

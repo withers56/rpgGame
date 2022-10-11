@@ -32,7 +32,7 @@ export default function addLoginEvent() {
             },
             request).then((data) => {
             setTokens(data);
-            createView("/personInfo");
+            createView("/home");
         });
     });
 }

@@ -2,11 +2,9 @@ package com.example.rpg.data;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
-import org.springdoc.core.SpringDocConfigProperties;
 
 import javax.persistence.*;
 import java.util.Collection;
-import java.util.List;
 
 @Getter
 @Setter
@@ -24,7 +22,7 @@ public class Bag {
 
     @OneToOne
     @JsonIgnoreProperties("bag")
-    private Character character;
+    private Hero hero;
 
     @ManyToMany(
             fetch = FetchType.LAZY,

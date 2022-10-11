@@ -13,7 +13,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "characters")
-public class Character {
+public class Hero {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,17 +33,17 @@ public class Character {
 
     @OneToOne
     @JsonIgnoreProperties("bags")
-    private Armor equipedArmor;
+    private Armor equippedArmor;
 
     @OneToOne
     @JsonIgnoreProperties("bags")
-    private Weapon equipedWeapon;
+    private Weapon equippedWeapon;
 
     @OneToOne
-    @JsonIgnoreProperties("accountCharacter")
-    private Account characterAccount;
+    @JsonIgnoreProperties("accountHero")
+    private Account heroAccount;
 
     @OneToOne
-    @JsonIgnoreProperties("character")
+    @JsonIgnoreProperties("hero")
     private Bag bag;
 }

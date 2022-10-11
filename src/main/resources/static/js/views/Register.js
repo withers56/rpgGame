@@ -69,17 +69,12 @@ export function RegisterEvent(){
     $("#register-btn").click(function(){
 
         const username = $("#username").val();
-        const firstName = $("#first").val();
-        const lastName = $("#last").val();
         const password = $("#password").val()
-        const dob = $("#dob").val();
+
 
         let newUser = {
             username,
-            firstName,
-            lastName,
-            password,
-            dob
+            password
         }
 
         console.log(newUser);
@@ -90,7 +85,7 @@ export function RegisterEvent(){
             body: JSON.stringify(newUser)
         }
 
-        fetch("http://localhost:8080/backendChallenge/persons/addPerson", request)
+        fetch("http://localhost:8080/rpg/accounts/register", request)
             .then(response => {
                 console.log(response.status);
                 CreateView("/");
