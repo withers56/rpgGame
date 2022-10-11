@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
@@ -13,26 +12,20 @@ import javax.validation.constraints.NotNull;
 @ToString
 
 @Entity
-@Table(name = "user_accounts")
-public class Account {
+@Table(name = "characters")
+public class Character {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
-    private String username;
+    private Long xp;
 
     @Column(nullable = false)
-    private String password;
-
-    @NotNull
-    @Enumerated(EnumType.STRING)
-    private Role role;
-
-    public enum Role {USER, MOD}
+    private Long level;
 
     @OneToOne
-    @JsonIgnoreProperties("characterAccount")
-    private Character accountCharacter;
+    @JsonIgnoreProperties("accountCharacter")
+    private Account characterAccount;
 }
