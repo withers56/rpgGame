@@ -1,0 +1,42 @@
+.charInfoBar {
+    position: relative;
+    top: 1em;
+    left: 1em;
+
+    width: 20%;
+
+    display: flex;
+    align-items: center;
+}
+
+.charImage {
+    font-size: 3em;
+}
+
+.stats {
+    width: 100%;
+}
+
+.black-border {
+    border: 1px solid black;
+}
+
+.healthProgress {
+    width: 100%;
+    background-color: #be0000;
+}
+
+.healthBar {
+    width: 50%;
+    background-color: red;
+}
+
+#myProgress {
+    width: 100%;
+    background-color: grey;
+}
+
+#myBar {
+    width: 50%;
+    background-color: green;
+}
