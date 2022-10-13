@@ -24,7 +24,7 @@ export default function router(URI) {
             state: {
                 me: '/rpg/accounts/me'
             },
-            uri: '/',
+            uri: '/home',
             title: 'Home',
             viewEvent: HomeEvent
         },

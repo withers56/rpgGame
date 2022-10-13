@@ -47,10 +47,6 @@ public class AccountController {
         System.out.println(accId);
 
         Optional<Account> myAccount = accountRepository.findById(accId);
-//
-//        System.out.println(myAccount.getId());
-
-
 
         Hero newHero = new Hero();
 
@@ -69,11 +65,5 @@ public class AccountController {
         myAccount.get().setAccountHero(heroRepository.findById(heroId).get());
 
         accountRepository.save(myAccount.get());
-//
-//
-//
-//        newAccount.setAccountHero(heroRepository.saveAndFlush(newHero));
-//
-//        accountRepository.save(newAccount);
     }
 }
