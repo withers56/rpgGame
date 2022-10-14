@@ -1,15 +1,15 @@
 
-export default function CharacterInfoBar(hero, username) {
+export default function CharacterInfoBar(currentHp, maxHp, username) {
     //language=html
     let html = `
-        <div class="charInfoBar">
+        <div class="charInfoBar mx-5">
             <div class="charImage black-border">
                 <i class="bi bi-person-fill "></i>
             </div>
             <div class="stats">
                 <div class="name text-center black-border">${username}</div>
                 <div class="healthProgress black-border text-center">
-                    <div class="healthBar">${hero.currentHp}/${hero.maxHp}</div>
+                    <div class="healthBar" id=${username + "health"}>${currentHp}/${maxHp}</div>
                 </div>
             </div>
         </div>
@@ -17,10 +17,10 @@ export default function CharacterInfoBar(hero, username) {
     return html
 }
 
-export function setHealthBar(current, max) {
+export function setHealthBar(current, max, element) {
     console.log("function to calc healthbar")
 
-    let bar = document.querySelector(".healthBar");
+    let bar = document.querySelector("#" + element + "health");
 
     console.log(bar)
 
