@@ -4,3 +4,13 @@
 
     margin: auto;
 }
+.game-chat {
+    width: 75%;
+    border: 2px solid black;
+    align-self: normal;
+}
+
+.actions {
+    border: 2px solid black;
+    width: 25%;
+}
