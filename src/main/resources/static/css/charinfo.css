@@ -3,7 +3,7 @@
     /*top: 1em;*/
     /*left: 1em;*/
 
-    width: 25%;
+    width: 350px;
 
     display: flex;
     align-items: center;
@@ -39,4 +39,8 @@
 #myBar {
     width: 50%;
     background-color: green;
+}
+
+.user-action-and-info{
+    width: 25%;
 }
